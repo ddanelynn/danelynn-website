@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { FlowerSetComponent } from './flower-set/flower-set.component';
 import { FlowerScrollComponent } from './flower-scroll/flower-scroll.component';
 import { TractComponent } from './tract/tract.component';
+import { PlaneComponent } from './plane/plane.component';
+import { LightComponent } from './light/light.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TractComponent } from './tract/tract.component';
     HomeComponent,
     FlowerSetComponent,
     FlowerScrollComponent,
-    TractComponent
+    TractComponent,
+    PlaneComponent,
+    LightComponent
   ],
   imports: [
     BrowserModule,

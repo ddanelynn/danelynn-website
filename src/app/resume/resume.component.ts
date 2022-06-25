@@ -24,7 +24,6 @@ export class ResumeComponent implements OnInit {
   }
 
   initScroll():void {
-    console.log(window.innerWidth);
     if (window.innerWidth <= 1530 && window.innerWidth >= 1100) {
       gsap.set("#app-flower-scroll", {transformOrigin: "50% 50%"});
       var animation;
@@ -32,7 +31,7 @@ export class ResumeComponent implements OnInit {
         rotation: 0,
         scrollTrigger: {
           trigger: "#motionPath",
-          start: "top 20px",
+          start: "top 50px",
           end: "bottom 500",
           scrub: 1,
 
@@ -59,5 +58,33 @@ export class ResumeComponent implements OnInit {
         }
       });
     }
+
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#plane",
+        start: "140% bottom",
+        end: "150% 30%",
+        toggleActions: 'restart none none none',
+      },
+    });
+
+    tl.to("#plane", { 
+      yoyo: true,
+      x:"+=7",
+      repeat: 20,
+      duration: '0.08',
+    }).to("#plane", {
+      translateX: "1500%",
+      duration: '2.5',
+    }).to("#plane", {
+      scaleX: "-1",
+      duration: '0',
+    }).to("#plane", {
+      translateX: "0",
+      duration: '1.5',
+    }).to("#plane", {
+      scaleX: "1",
+      duration: '0.5',
+    })
   }
 }

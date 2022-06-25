@@ -78,6 +78,18 @@
             padding: 17px 40px 25px 40px;
             font-size: 22px;
             line-height: 35px;
+            position: relative;
+            .plane {
+                position: absolute;
+                bottom: -50px;
+                left: -100px;
+            }
+            .light {
+                position: absolute;
+                bottom: -40px;
+                right: -20px;
+                z-index: 2;
+            }
             &__header {
                 font-weight: 600;
                 color: #656F5E;
