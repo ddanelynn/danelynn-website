@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,7 +13,7 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 })
 export class ResumeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.initScroll();
@@ -24,39 +24,40 @@ export class ResumeComponent implements OnInit {
   }
 
   initScroll():void {
-    var animation;
+    console.log(window.innerWidth);
+    if (window.innerWidth <= 1530 && window.innerWidth >= 1100) {
+      gsap.set("#app-flower-scroll", {transformOrigin: "50% 50%"});
+      var animation;
+      animation = gsap.to("#app-flower-scroll", {
+        rotation: 0,
+        scrollTrigger: {
+          trigger: "#motionPath",
+          start: "top 20px",
+          end: "bottom 500",
+          scrub: 1,
 
-    gsap.set("#app-flower-scroll", {transformOrigin: "50% 50%"});
+          onUpdate: self => {
+            gsap.to("#app-flower-scroll", {rotation: 360, transformOrigin: "center", overwrite: 'auto'});
+          },
 
-    animation = gsap.to("#app-flower-scroll", {
-      rotation: 0,
-      scrollTrigger: {
-        trigger: "#motionPath",
-        start: "top 80px",
-        end: "bottom 500px",
-        scrub: 1,
+          onLeave: () => {
+            gsap.to("#app-flower-scroll", {opacity: '0'})
+          },
 
-        onUpdate: self => {
-          gsap.to("#app-flower-scroll", {rotation: 360, transformOrigin: "center", overwrite: 'auto'});
+          onEnterBack: () => {
+            gsap.to("#app-flower-scroll", {opacity: '1'})
+          }
+
         },
-
-        onLeave: () => {
-          gsap.to("#app-flower-scroll", {opacity: '0'})
-        },
-
-        onEnterBack: () => {
-          gsap.to("#app-flower-scroll", {opacity: '1'})
+        duration: 10,
+        ease: "none",
+        immediateRender: true,
+        motionPath: {
+          path: "#motionPath",
+          align: "#motionPath",
+          alignOrigin: [0.5, 0.5],
         }
-
-      },
-      duration: 10,
-      ease: "none",
-      immediateRender: true,
-      motionPath: {
-        path: "#motionPath",
-        align: "#motionPath",
-        alignOrigin: [0.5, 0.5],
-      }
-    });
+      });
+    }
   }
 }
