@@ -10,6 +10,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+svg:not(:root) {
+    overflow: visible;
+}
+
 ul {
     margin-block-start: 0;
     margin-block-end: 0;

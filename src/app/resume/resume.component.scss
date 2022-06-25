@@ -3,6 +3,28 @@
     flex-direction: column;
     padding: 70px 70px;
     padding-bottom: 30px;
+    position: relative;
+    .tract {
+        position: absolute;
+        top: 10vw;
+        left: 5%;
+        width: 90%;
+        z-index: 2;
+        transform: scaleX(-1);
+        opacity: 0;
+    }
+    .flower-set {
+        position: absolute;
+        right: 30px;
+        top: 40px;
+        transform: rotate(55deg);
+    }
+    .flower-scroll {
+        position: absolute;
+        right: 70px;
+        top: 110px;
+        z-index: 10;
+    }
     .introduction-block {
         display: flex;
         align-items: center;

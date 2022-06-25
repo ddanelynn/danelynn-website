@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HomeComponent } from './home/home.component';
+import { FlowerSetComponent } from './flower-set/flower-set.component';
+import { FlowerScrollComponent } from './flower-scroll/flower-scroll.component';
+import { TractComponent } from './tract/tract.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ResumeComponent,
-    HomeComponent
+    HomeComponent,
+    FlowerSetComponent,
+    FlowerScrollComponent,
+    TractComponent
   ],
   imports: [
     BrowserModule,
