@@ -1,0 +1,10 @@
+.projects-container {
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    .text {
+        margin-top: 200px;
+        font-size: 70px;
+    }
+}
