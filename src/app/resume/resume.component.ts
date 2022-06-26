@@ -18,6 +18,7 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
     this.initScroll();
     this.showNav();
+    this.activateTab('resume');
   }
 
   navigate(path: string, id?: string) {
@@ -27,9 +28,13 @@ export class ResumeComponent implements OnInit {
     }
     this.clearActiveTag();
     if (typeof id !== undefined) {
-      document.getElementById(id!)?.classList.add('active');
-      document.getElementById(`${id!}-mobile`)?.classList.add('active');
+      this.activateTab(id!);
     }
+  }
+
+  activateTab(id: string) {
+    document.getElementById(id!)?.classList.add('active');
+    document.getElementById(`${id!}-mobile`)?.classList.add('active');
   }
 
   clearActiveTag() {

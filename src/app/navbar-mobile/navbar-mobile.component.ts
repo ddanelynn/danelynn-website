@@ -20,6 +20,7 @@ export class NavbarMobileComponent implements OnInit {
       document.getElementById(id!)?.classList.add('active');
       document.getElementById(`${id!}-mobile`)?.classList.add('active');
     }
+    this.toggleMenu();
   }
 
   navigateLink(url: string) {

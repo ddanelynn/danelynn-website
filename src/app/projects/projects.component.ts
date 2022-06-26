@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -7,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.showNav();
+    this.activateTab('projects');
+  }
+
+  navigateLink(url: string) {
+    window.open(url);
+  }
+
+  activateTab(id: string) {
+    document.getElementById(id!)?.classList.add('active');
+    document.getElementById(`${id!}-mobile`)?.classList.add('active');
   }
 
   showNav() {
