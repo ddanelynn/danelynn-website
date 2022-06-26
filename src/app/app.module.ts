@@ -10,7 +10,8 @@ import { FlowerSetComponent } from './flower-set/flower-set.component';
 import { FlowerScrollComponent } from './flower-scroll/flower-scroll.component';
 import { TractComponent } from './tract/tract.component';
 import { PlaneComponent } from './plane/plane.component';
-import { LightComponent } from './light/light.component';
+import { NavbarMobileComponent } from './navbar-mobile/navbar-mobile.component';
+import { StarComponent } from './star/star.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LightComponent } from './light/light.component';
     FlowerScrollComponent,
     TractComponent,
     PlaneComponent,
-    LightComponent
+    NavbarMobileComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

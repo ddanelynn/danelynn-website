@@ -1,0 +1,23 @@
+<div class="navbar-mobile-container">
+    <img class="menu-avatar" 
+         src="../assets/menu.png" 
+         alt="menu"
+         (click)="toggleMenu()">
+    <div class="menu">
+        <img class="close" 
+             src="../assets/close.png" 
+             alt="close"
+             (click)="toggleMenu()">
+        <div class="home"
+                (click)="navigate('/home')">HOME</div>
+        <div class="nav-item" id="resume-mobile"
+                (click)="navigate('/resume', 'resume')">Resume</div>
+        <div class="nav-item" id="projects-mobile">Projects</div>
+        <div class="nav-item"
+                (click)="navigateLink('https://github.com/ddanelynn')">Github</div>
+        <div class="nav-item"
+                (click)="navigateLink('https://www.linkedin.com/in/danelynnding/')">LinkedIn</div>
+        <div class="nav-item"
+                (click)="navigateLink('https://danelynnding.wixsite.com/portfolio')">Photography</div>
+    </div>
+</div>

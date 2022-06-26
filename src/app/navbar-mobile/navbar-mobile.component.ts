@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: 'app-navbar-mobile',
+  templateUrl: './navbar-mobile.component.html',
+  styleUrls: ['./navbar-mobile.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarMobileComponent implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -30,6 +30,15 @@ export class NavbarComponent implements OnInit {
     document.querySelectorAll('.nav-item').forEach((navItem) => {
       navItem.classList.remove('active');
     })
+  }
+
+  toggleMenu() {
+    const menu = document.querySelector('.menu') as HTMLElement;
+    if (menu.style.display == 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
   }
 
 }
