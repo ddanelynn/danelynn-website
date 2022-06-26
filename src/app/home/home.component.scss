@@ -28,7 +28,7 @@
         margin: 10px;
     }
     .profile-block {
-        margin-top: 40px;
+        margin-top: 8vh;
         position: relative;
         display: flex;
         justify-content: center;
@@ -133,7 +133,50 @@
     .alert {
         animation: alert 1.3s infinite;
     }
+
+    @media only screen and (max-width: 540px) {
+        .name {
+            font-size: 45px;
+            margin-top: 20vh;
+        }
+        .role {
+            font-size: 20px;
+        }
+        .profile-block {  
+            height: 185px;
+            width: 185px;
+            margin-top: 6vh;
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+            }
+            .yellow-circle {
+                height: 160px;
+                width: 160px;
+                top: 3px;
+                left: -3px;
+            }
+            .pink-circle {
+                height: 175px;
+                width: 175px;
+                top: 8px;
+                right: -2px;
+            }
+            .home-nav-items {
+                width: 50px;
+                height: 50px;
+                .home-nav-item {
+                    width: 50px;
+                    height: 50px;                
+                    &__title {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 @keyframes alert {
     0%, 10%, 25%, 40%, 50%, 100% {transform: translateY(0);} 
