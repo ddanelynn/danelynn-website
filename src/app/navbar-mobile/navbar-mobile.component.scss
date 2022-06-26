@@ -1,9 +1,14 @@
 .navbar-mobile-container {
     position: relative;
     .menu-avatar {
-        width: 70px;
+        width: 40px;
         margin: 30px;
         cursor: pointer;
+    }
+    @media only screen and (max-width: 540px) {
+        .menu-avatar {
+            margin: 20px;
+        }
     }
     .menu {
         position: absolute;

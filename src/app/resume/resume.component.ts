@@ -74,8 +74,8 @@ export class ResumeComponent implements OnInit {
       repeat: 20,
       duration: '0.08',
     }).to("#plane", {
-      translateX: "1500%",
-      duration: '2.5',
+      translateX: "1000%",
+      duration: '2',
     }).to("#plane", {
       scaleX: "-1",
       duration: '0',

@@ -73,7 +73,7 @@
         &__content {
             color: #968186;
             background-color: white;
-            width: 100%;
+            width: calc(100% - 80px);
             border-radius: 30px;
             padding: 17px 40px 25px 40px;
             font-size: 22px;
@@ -183,6 +183,101 @@
             height: 80%;
             animation: animateHeart 0.5s infinite;
         }
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .resume-container {
+        padding: 50px 30px 40px;
+        .introduction-block {
+            flex-direction: column;
+            margin-bottom: 15px;
+            .profile {
+                margin-bottom: 20px;
+                margin-right: 0;
+                width: 200px;
+                height: 200px;
+            }
+            .introduction-text {
+                &__title {
+                    font-size: 32px;
+                    text-align: center;
+                }
+                &__content {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .resume-block {
+            flex-direction: column;
+            margin-bottom: 15px;
+            &__title {
+                font-size: 28px;
+                margin: 10px;
+            }
+            &__content {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
+        .line {
+            display: none;
+        }
+        .tech-tools {
+            display: flex;
+            flex-direction: column;
+            &__title {
+                font-size: 28px;
+                margin: 10px;
+            }
+            &__content {
+                .flip-box {
+                    width: 140px;
+                    height: 46px;
+                    .tech-tools-stack {
+                        .language-tag {
+                            width: 140px;
+                            height: 46px;
+                            border-radius: 10px;
+                            font-size: 20px;
+                        }
+                        .language-tag-back {
+                            width: 140px;
+                            height: 46px;
+                            .language-icon {
+                                width: 50px;
+                                top: 0px;
+                                left: 45px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .flower-set {
+        display: none;
+    }
+    .flower-scroll {
+        display: none;
+    }
+    .plane {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .resume-container {
+        padding: 50px 20px 20px;
+        .tech-tools {
+            &__content {
+                justify-content: center;
+            }
+        }
+    }
+    .star {
+        transform: scale(0.8);
     }
 }
 
