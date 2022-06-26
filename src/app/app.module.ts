@@ -13,6 +13,7 @@ import { PlaneComponent } from './plane/plane.component';
 import { NavbarMobileComponent } from './navbar-mobile/navbar-mobile.component';
 import { StarComponent } from './star/star.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     PlaneComponent,
     NavbarMobileComponent,
     StarComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

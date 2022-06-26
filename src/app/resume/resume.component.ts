@@ -17,10 +17,30 @@ export class ResumeComponent implements OnInit {
 
   ngOnInit(): void {
     this.initScroll();
+    this.showNav();
   }
 
-  navigate(path: string) {
+  navigate(path: string, id?: string) {
     this.router.navigateByUrl(path);
+    if (path == '/home') {
+      document.querySelector('.app-navbar')?.classList.add('invisible-nav');
+    }
+    this.clearActiveTag();
+    if (typeof id !== undefined) {
+      document.getElementById(id!)?.classList.add('active');
+      document.getElementById(`${id!}-mobile`)?.classList.add('active');
+    }
+  }
+
+  clearActiveTag() {
+    document.querySelectorAll('.nav-item').forEach((navItem) => {
+      navItem.classList.remove('active');
+    })
+  }
+
+  showNav() {
+    document.querySelector('.app-navbar')?.classList.remove('invisible-nav');
+    document.querySelector('.app-navbar-mobile')?.classList.remove('invisible-nav');
   }
 
   initScroll():void {

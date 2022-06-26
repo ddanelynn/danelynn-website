@@ -2,9 +2,33 @@
     <div class="cover"></div>
     <div class="name">Danelynn Ding</div>
     <div class="role">Software Engineer</div>
-    <div class="profile-block">
+    <div class="profile-block alert"
+         (click)="togglehomeNavItems(homeNavItems, expanded)">
         <img class="profile-pic" src="../assets/profile-pic.png" alt="profile">
         <div class="yellow-circle"></div>
         <div class="pink-circle"></div>
+
+        <div class="home-nav-items" #homeNavItems>
+            <div class="home-nav-item" id="home-nav-photography"
+                 (click)="navigateLink('https://danelynnding.wixsite.com/portfolio')">
+                <div class="home-nav-item__title">Photography</div>
+            </div>
+            <div class="home-nav-item" id="home-nav-linkedin"
+                 (click)="navigateLink('https://www.linkedin.com/in/danelynnding/')">
+                <div class="home-nav-item__title">LinkedIn</div>
+            </div>
+            <div class="home-nav-item" id="home-nav-github"
+                 (click)="navigateLink('https://github.com/ddanelynn')">
+                <div class="home-nav-item__title">Github</div>
+            </div>
+            <div class="home-nav-item" id="home-nav-projects"
+                 (click)="navigate('/projects', 'projects')">
+                <div class="home-nav-item__title">Projects</div>
+            </div>
+            <div class="home-nav-item" id="home-nav-resume"
+                 (click)="navigate('/resume', 'resume')">
+                <div class="home-nav-item__title">Resume</div>
+            </div>
+        </div>
     </div>
 </div>
