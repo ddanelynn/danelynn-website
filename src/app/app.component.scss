@@ -1,8 +1,21 @@
 .website-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .invisible-nav {
+        display: none;
+    }
+    app-navbar {
+        width: 100vw;
+    }
+
     app-navbar-mobile {
         position: absolute;
         display: none;
         z-index: 5;
+        left: 0;
+        top: 0;
     }
 
     @media only screen and (max-width: 870px) {
@@ -13,5 +26,10 @@
         app-navbar-mobile {
             display: block;
         }
+    }
+
+    app-footer {
+        position: absolute;
+        bottom: 0;
     }
 }

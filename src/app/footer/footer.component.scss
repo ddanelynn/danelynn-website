@@ -1,0 +1,33 @@
+.footer {
+    margin-bottom: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__heart {
+        height: 80%;
+        animation: animateHeart 0.5s infinite;
+    }
+}
+
+@keyframes animateHeart {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(1px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-1px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

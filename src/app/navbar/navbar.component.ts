@@ -15,6 +15,9 @@ export class NavbarComponent implements OnInit {
 
   navigate(path: string, id?: string) {
     this.router.navigateByUrl(path);
+    if (path == '/home') {
+      document.querySelector('.app-navbar')?.classList.add('invisible-nav');
+    }
     this.clearActiveTag();
     if (typeof id !== undefined) {
       document.getElementById(id!)?.classList.add('active');

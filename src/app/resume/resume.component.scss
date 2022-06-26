@@ -112,6 +112,7 @@
     }
     .tech-tools {
         display: flex;
+        margin-bottom: 200px;
         &__title {
             font-size: 36px;
             font-weight: 600;
@@ -171,17 +172,6 @@
                     }
                 }
             }
-        }
-    }
-    .footer {
-        margin-top: 200px;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &__heart {
-            height: 80%;
-            animation: animateHeart 0.5s infinite;
         }
     }
 }
@@ -271,6 +261,7 @@
     .resume-container {
         padding: 50px 20px 20px;
         .tech-tools {
+            margin-bottom: 100px;
             &__content {
                 justify-content: center;
             }
@@ -278,27 +269,5 @@
     }
     .star {
         transform: scale(0.8);
-    }
-}
-
-@keyframes animateHeart {
-    0% {
-        transform: translateY(0);
-    }
-
-    25% {
-        transform: translateY(1px);
-    }
-
-    50% {
-        transform: translateY(0px);
-    }
-
-    75% {
-        transform: translateY(-1px);
-    }
-
-    100% {
-        transform: translateY(0);
     }
 }

@@ -12,6 +12,7 @@ import { TractComponent } from './tract/tract.component';
 import { PlaneComponent } from './plane/plane.component';
 import { NavbarMobileComponent } from './navbar-mobile/navbar-mobile.component';
 import { StarComponent } from './star/star.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StarComponent } from './star/star.component';
     TractComponent,
     PlaneComponent,
     NavbarMobileComponent,
-    StarComponent
+    StarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
