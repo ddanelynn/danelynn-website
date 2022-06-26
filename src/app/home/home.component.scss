@@ -1,6 +1,6 @@
 .home-container {
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
 
     .cover {
         width: 100%;
-        height: 50%;
+        height: 50vh;
         background-color: #D6E1B5;
         position: absolute;
         top: 0;
@@ -19,7 +19,7 @@
         font-size: 60px;
         font-weight: 600;
         color: #656F5E;
-        margin-top: 10vh;
+        margin-top: 8vh;
     }
     .role {
         font-size: 24px;
@@ -28,7 +28,7 @@
         margin: 10px;
     }
     .profile-block {
-        margin-top: 8vh;
+        margin-top: 6vh;
         position: relative;
         display: flex;
         justify-content: center;
@@ -174,6 +174,12 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .home-container {
+        height: 100vh;
     }
 }
 

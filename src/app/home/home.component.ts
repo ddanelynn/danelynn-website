@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit {
 
   getDistance() {
     if (window.innerWidth > 540) {
-      return 270;
+      return 250;
     } else {
       return 150;
     }
