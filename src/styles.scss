@@ -10,7 +10,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-svg:not(:root) {
+svg {
     overflow: visible;
 }
 
