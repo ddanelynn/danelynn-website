@@ -1,4 +1,8 @@
 # DanelynnWebsite
+### View the website [HERE](https://www.danelynnding.com)
+
+![Screenshot 2022-06-28 at 12 15 36 AM](https://user-images.githubusercontent.com/66818697/175988073-913647cf-c2dd-4bfe-bfec-8084e5d36acd.png)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
