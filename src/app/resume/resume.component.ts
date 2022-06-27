@@ -49,7 +49,7 @@ export class ResumeComponent implements OnInit {
   }
 
   initScroll():void {
-    if (window.innerWidth <= 1530 && window.innerWidth >= 1100) {
+    if (window.innerWidth <= 1540 && window.innerWidth >= 1100) {
       gsap.set("#app-flower-scroll", {transformOrigin: "50% 50%"});
       var animation;
       animation = gsap.to("#app-flower-scroll", {
