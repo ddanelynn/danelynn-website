@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
     &__heart {
         height: 80%;
         animation: animateHeart 0.5s infinite;
