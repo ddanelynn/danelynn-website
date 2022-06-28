@@ -1,12 +1,12 @@
 .footer {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     &__heart {
-        height: 80%;
+        height: 70%;
         animation: animateHeart 0.5s infinite;
     }
 }
