@@ -16,9 +16,19 @@ export class ResumeComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.initTractDimension();
     this.initScroll();
     this.showNav();
     this.activateTab('resume');
+  }
+
+  initTractDimension() {
+    const resumeContainer = document.querySelector('.resume-container') as HTMLElement;
+    const resumeHeight = resumeContainer.offsetHeight;
+    const tract = document.querySelector('.tract') as HTMLElement;
+    const tractHeight = tract.offsetHeight;
+    const scale = resumeHeight * 0.85 / tractHeight;
+    tract.style.transform = `scaleY(${scale}) scaleX(-1)`;
   }
 
   navigate(path: string, id?: string) {
@@ -49,7 +59,7 @@ export class ResumeComponent implements OnInit {
   }
 
   initScroll():void {
-    if (window.innerWidth <= 1540 && window.innerWidth >= 1100) {
+    if (window.innerWidth > 870) {
       gsap.set("#app-flower-scroll", {transformOrigin: "50% 50%"});
       var animation;
       animation = gsap.to("#app-flower-scroll", {
