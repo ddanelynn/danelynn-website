@@ -27,6 +27,12 @@
         color: #656F5E;
         margin: 10px;
     }
+    .profile-block-cover {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    }
     .profile-block {
         margin-top: 6vh;
         position: relative;
@@ -145,7 +151,6 @@
         .profile-block {  
             height: 185px;
             width: 185px;
-            margin-top: 6vh;
             .profile-pic {
                 width: 150px;
                 height: 150px;

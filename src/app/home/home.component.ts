@@ -28,18 +28,26 @@ export class HomeComponent implements OnInit {
 
   private showElements(homeNavItemsList: HTMLElement[]): void {
     this.expanded = true;
-    document.querySelector('.profile-block')?.classList.remove('alert')
+    document.querySelector('.profile-block')?.classList.remove('alert');
+    const cover = document.querySelector('.profile-block-cover') as HTMLElement;
+    cover.style.zIndex = '10';
+    const timeLineArr = [];
+    for (let i = 0; i < homeNavItemsList.length; i++) {
+      timeLineArr.push(gsap.timeline());
+    }
     for (let i = 0; i < homeNavItemsList.length; i++) {
       const sliced = homeNavItemsList.slice(i, homeNavItemsList.length);
       const angle = 130/(homeNavItemsList.length - 1);
-      gsap.to(sliced, {
+      timeLineArr[i].to(sliced, {
         translateX: this.getDistance() * Math.cos(i * (angle/180 * Math.PI) + 25/180 * Math.PI),
         translateY: this.getDistance() * Math.sin(i * (angle/180 * Math.PI) + 25/180 * Math.PI),
-        delay: 0.3 * i,
-        duration: 0.6
+        delay: 0.1 * i,
+        duration: 0.4,
       });
     }
-
+    timeLineArr[homeNavItemsList.length - 1].to(cover, {
+      zIndex: -1,
+    })
   }
 
   private hideElements(homeNavItemsList: HTMLElement[]): void {
