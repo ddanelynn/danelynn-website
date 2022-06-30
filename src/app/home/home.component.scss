@@ -46,6 +46,7 @@
             cursor: pointer;
             position: absolute;
             z-index: 3;
+            border-radius: 50%;
             &:hover {
                 transform: scale(1.02);
             }
