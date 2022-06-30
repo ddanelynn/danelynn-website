@@ -41,9 +41,9 @@
         align-items: center;
         width: 350px;
         height: 300px;
-        cursor: pointer;
 
         .profile-pic {
+            cursor: pointer;
             position: absolute;
             z-index: 3;
             &:hover {
@@ -85,6 +85,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
             
                 &__title {
                     padding: 4px 10px;
