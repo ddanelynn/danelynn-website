@@ -1,5 +1,5 @@
 # DanelynnWebsite
-### View the website [HERE](https://www.danelynnding.com)
+### View the website [HERE](https://ddanelynn.github.io/danelynn-website/)
 
 ![website](https://user-images.githubusercontent.com/66818697/176067908-d2006707-752e-4cc6-bb15-d8c7cb0bce76.gif)
 
